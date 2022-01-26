@@ -1,6 +1,7 @@
-import { View, Text, FlatList } from 'react-native';
+import { View } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { getTasks } from '../api';
+import TaskList from '../components/TaskList';
 
 const HomeScreen = () => {
     const [tasks, setTasks] = useState([]);
@@ -16,17 +17,7 @@ const HomeScreen = () => {
 
     return (
         <View>
-            <FlatList
-                data={tasks}
-                renderItem={
-                    ({item}) => {
-                        return (
-                            <Text>{item.title}</Text>
-                        );
-                    }
-                }
-            />
-
+            <TaskList tasks={tasks}/>
         </View>
     );
 };
