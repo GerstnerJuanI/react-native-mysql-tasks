@@ -1,11 +1,13 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
+import Layout from '../components/Layout';
+
 const taskFormScreen = () => {
     return (
-        <View>
+        <Layout>
             <Text>Task form</Text>
-        </View>
+        </Layout>
     );
 };
 
