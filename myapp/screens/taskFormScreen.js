@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, TextInput,StyleSheet } from 'react-native';
 import React from 'react';
 
 import Layout from '../components/Layout';
@@ -6,9 +6,20 @@ import Layout from '../components/Layout';
 const taskFormScreen = () => {
     return (
         <Layout>
-            <Text>Task form</Text>
+            <TextInput
+                placeholder='write a Title'
+                />
+            <TextInput
+                placeholder='Write a description'/>
+
+
         </Layout>
     );
 };
-
+const styles = StyleSheet.create({
+    input:{
+        width: '90%',
+        backgroundColor:'red'
+    }
+})
 export default taskFormScreen;
