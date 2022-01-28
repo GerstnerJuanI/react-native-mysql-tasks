@@ -1,8 +1,23 @@
 
-const dir1= 'http://192.168.56.1'
-const API= dir1 + ':3000/tasks'
+const API= 'http://192.168.200.87:3000/tasks'
 
 export const getTasks = async () =>{
     const res = await fetch(API);
     return await res.json();
+};
+
+export const saveTask = async (newTask) => {
+    const res = await fetch(API, {
+        method:'POST',
+        headers: { Accept: "application/json","Content-Type": "application/json"},
+        body: JSON.stringify(newTask)
+    });
+    return await res.json();
+};
+
+export const deleteTask = async (id) =>{
+    await fetch( `${API}/${id}`,{
+        method: "DELETE",
+
+    })
 }

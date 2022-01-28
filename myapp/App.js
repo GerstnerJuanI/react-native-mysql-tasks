@@ -19,10 +19,11 @@ const App = () => {
             headerStyle: { backgroundColor: "#222f3e" },
             headerTitleStyle: { color: "#ffffff" },
             headerRight: () => (
-              <TouchableOpacity onPress={() => navigation.navigate("TaskFormScreen")}>
+              <TouchableOpacity 
+                onPress={() => navigation.navigate("TaskFormScreen")}>
                 <Text style={{color: '#ffffff', marginRight: 20, fontSize: 15}}>New</Text> 
               </TouchableOpacity>
-            )
+            ),
           })} />
 
         <Stack.Screen 
